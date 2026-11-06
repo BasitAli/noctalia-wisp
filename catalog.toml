@@ -1,0 +1,17 @@
+# Plugin catalog for this source repo — the index Noctalia reads to enumerate
+# and compat-check plugins when this repo is added as a plugin source. The
+# per-plugin noctalia-wisp/plugin.toml stays authoritative; the host re-reads it
+# on enable. Keep one [[plugin]] row per plugin subdirectory.
+
+[[plugin]]
+id = "basitali/noctalia-wisp"
+name = "Noctalia Wisp"
+version = "0.1.0"
+updated_at = 1794000000
+added_at = 1794000000
+author = "basitali"
+license = "MIT"
+icon = "microphone"
+description = "Corner overlay for the Wisp voice daemon (status, answer, choices)."
+plugin_api = 36
+tags = ["wisp", "voice", "overlay"]

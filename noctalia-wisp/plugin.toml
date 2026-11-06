@@ -1,0 +1,58 @@
+# Wisp companion — Noctalia overlay for duketopceo/wisp.
+#
+# Settings / Activity stay in the Quickshell management Panel
+# (`quickshell -n -p ~/.local/opt/wisp/shells/debug`). This plugin only
+# surfaces live turns: status, transcript, answer, and choice buttons.
+#
+#   * service.luau — polls $XDG_RUNTIME_DIR/wisp/state.json, publishes a
+#     snapshot, shows/hides the overlay, runs `wispd choice` on request.
+#   * overlay.luau — corner card; pure presentation + choice/dismiss writes.
+
+id = "basitali/noctalia-wisp"
+name = "Noctalia Wisp"
+version = "0.1.0"
+plugin_api = 36
+author = "basitali"
+license = "MIT"
+icon = "microphone"
+description = "Corner overlay for the Wisp voice daemon (status, answer, choices)."
+dependencies = []
+tags = ["wisp", "voice", "overlay"]
+
+[[setting]]
+key = "hide_after_ms"
+type = "int"
+label_key = "settings.hide_after_ms.label"
+description_key = "settings.hide_after_ms.description"
+default = 5000
+min = 0
+max = 60000
+advanced = true
+
+[[setting]]
+key = "poll_ms"
+type = "int"
+label_key = "settings.poll_ms.label"
+description_key = "settings.poll_ms.description"
+default = 250
+min = 100
+max = 2000
+advanced = true
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[layer]]
+id = "overlay"
+entry = "overlay.luau"
+layer = "overlay"
+anchors = ["bottom", "right"]
+width = 360
+height = 0
+margins = { bottom = 24, right = 24 }
+exclusive_zone = 0
+keyboard = "on_demand"
+click_through = false
+output = "focused"
+visible = false

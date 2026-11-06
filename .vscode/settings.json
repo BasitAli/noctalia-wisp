@@ -1,0 +1,4 @@
+{
+  "luau-lsp.types.definitionFiles": ["noctalia.d.luau"],
+  "luau-lsp.sourcemap.enabled": false
+}

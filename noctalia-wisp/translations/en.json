@@ -1,0 +1,14 @@
+{
+  "settings.hide_after_ms.label": "Hide after (ms)",
+  "settings.hide_after_ms.description": "How long to keep the card visible after a finished turn (0 = hide immediately).",
+  "settings.poll_ms.label": "Poll interval (ms)",
+  "settings.poll_ms.description": "How often the service re-reads Wisp's state.json.",
+  "status.listening": "listening",
+  "status.hearing": "hearing",
+  "status.thinking": "thinking",
+  "status.working": "working",
+  "status.needs_you": "needs you",
+  "status.speaking": "speaking",
+  "status.error": "error",
+  "status.done": "done"
+}
